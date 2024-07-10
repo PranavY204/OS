@@ -115,7 +115,7 @@ void lru(int pages[], int pagesCount, int framesCount) {
     }
 
     for (int i = 0; i < pagesCount; i++) {
-        bool fault = true;
+        bool fault = false;
         if (!isPageInFrames(pages[i], frames, framesCount)) {
             int lruIndex = 0;
             for (int j = 1; j < framesCount; j++) {
