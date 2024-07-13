@@ -41,8 +41,8 @@ int main() {
 void findWaitingTime(int n, int bt[], int wt[], int at[], int tat[]) {
     int ct[n]; // Completion time
     wt[0] = 0; // Waiting time for the first process is always 0
-    ct[0] = bt[0];
-    tat[0] = ct[0];
+    ct[0] = bt[0] = at[0];
+    tat[0] = ct[0] - bt[0];
 
     // Calculate waiting time for remaining processes using FCFS
     for (int i = 1; i < n; i++) {
